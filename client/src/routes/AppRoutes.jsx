@@ -6,9 +6,9 @@ import { useAuth } from '../context/AuthContext';
 const Login = lazy(() => import('../pages/Login'));
 const Register = lazy(() => import('../pages/Register'));
 const Dashboard = () => <div className="p-8">Dashboard (protected)</div>;
-const Products = () => <div className="p-8">Products Table (protected)</div>;
-const AddProduct = () => <div className="p-8">Add Product Form (protected)</div>;
-const Analytics = () => <div className="p-8">Analytics Dashboard (protected)</div>;
+const Products = lazy(() => import('../pages/Products'));
+const AddProduct = lazy(() => import('../pages/AddProduct'));
+const Analytics = lazy(() => import('../pages/Analytics'));
 
 // Component to protect routes
 function RequireAuth() {
